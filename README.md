@@ -16,7 +16,7 @@ Graph shows **active** directory role assignments reasonably well. **Eligible** 
 ## How to run
 
 ```powershell
-Connect-MgGraph -Scopes User.Read.All,Directory.Read.All,AuditLog.Read.All,Organization.Read.All
+Connect-MgGraph -TenantId 'a1b2c3d4-e5f6-7890-abcd-ef1234567890' -Scopes User.Read.All,Directory.Read.All,AuditLog.Read.All,Organization.Read.All
 
 .\scripts\Get-StaleAccounts.ps1 -InactiveDays 90 -ExportPath .\out\stale.csv
 .\scripts\Get-LicenceAssignmentReport.ps1 -ExportPath .\out\licences.csv
@@ -27,7 +27,7 @@ Outputs are CSV. Tune filters before you email them to leadership — raw dumps 
 
 ## Sample data
 
-`output/sample-report.csv` is **fake** placeholder data for structure only.
+`output/sample-report.csv` is **fake** data only (Harven-style names such as `j.smith@harven.co.uk`) — structure demo, not your HR export.
 
 ## Limits
 
