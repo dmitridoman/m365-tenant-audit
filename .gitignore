@@ -1,0 +1,4 @@
+*.log
+.DS_Store
+output/*.csv
+!output/sample-report.csv
