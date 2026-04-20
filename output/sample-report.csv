@@ -1,0 +1,6 @@
+"userPrincipalName","displayName","accountEnabled","lastSignInDateTime","assignedSkuPartNumbers","notes"
+"alexa.contoso@contoso.onmicrosoft.com","Alexa Contoso","true","2025-11-02T08:14:22Z","ENTERPRISEPACK;FLOW_FREE","SAMPLE ROW — NOT REAL"
+"benjamin.fabrikam@contoso.onmicrosoft.com","Benjamin Fabrikam","false","","ENTERPRISEPACK","SAMPLE — disabled account still holding SKU in fake data"
+"carmen.placeholder@contoso.onmicrosoft.com","Carmen Placeholder","true","2024-01-10T19:02:11Z","","SAMPLE — no licences, old sign-in"
+"dev.serviceaccount@contoso.onmicrosoft.com","Dev Service Account","true","2026-01-03T11:45:00Z","DEVELOPERPACK_E5","SAMPLE — service-style UPN"
+"edmund.northwind@contoso.onmicrosoft.com","Edmund Northwind","true","2026-03-28T07:01:55Z","ENTERPRISEPREMIUM","SAMPLE — recent sign-in"
