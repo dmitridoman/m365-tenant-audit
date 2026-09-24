@@ -2,12 +2,16 @@
 
 Read-only PowerShell for **quick tenant hygiene**: stale-ish accounts, licence assignments, and directory role membership visibility.
 
-Built for quarterly tidy-ups and “why are we paying for this” conversations — not for pretending you have a full GRC platform.
+**Status:** working scripts, read-only.
+**Runs on:** PowerShell 7 or 5.1 with the Microsoft Graph modules.
+**Used by:** IT admins running quarterly tenant tidy-ups.
+
+Built for quarterly tidy-ups and “why are we paying for this” conversations, not for pretending you have a full GRC platform.
 
 ## Prerequisites
 
 - `Microsoft.Graph` modules (`Users`, `Identity.DirectoryManagement`, `Identity.Governance` optional).
-- Permissions: `User.Read.All`, `Directory.Read.All`, `Organization.Read.All` as a baseline. Some sign-in fields need **AuditLog.Read.All** — without it, last sign-in may be empty and the script will say so.
+- Permissions: `User.Read.All`, `Directory.Read.All`, `Organization.Read.All` as a baseline. Some sign-in fields need **AuditLog.Read.All**: without it, last sign-in may be empty and the script will say so.
 
 ## Privileged Identity Management (PIM)
 
@@ -23,13 +27,13 @@ Connect-MgGraph -TenantId 'a1b2c3d4-e5f6-7890-abcd-ef1234567890' -Scopes User.Re
 .\scripts\Get-PrivilegedRoleMembers.ps1 -ExportPath .\out\roles.csv
 ```
 
-Outputs are CSV. Tune filters before you email them to leadership — raw dumps embarrass people.
+Outputs are CSV. Tune filters before you email them to leadership: raw dumps embarrass people.
 
 ## Sample data
 
-`output/sample-report.csv` is **fake** data only (Harven-style names such as `j.smith@harven.co.uk`) — structure demo, not your HR export.
+`output/sample-report.csv` is **fake** data only (Harven-style names such as `j.smith@harven.co.uk`): structure demo, not your HR export.
 
 ## Limits
 
 - Sign-in logs can lag; `lastSignInDateTime` is not perfect for every workload.
-- Guest users and cloud-only vs synced users need different interpretation — the scripts do not try to be clever about HR truth.
+- Guest users and cloud-only vs synced users need different interpretation: the scripts do not try to be clever about HR truth.
